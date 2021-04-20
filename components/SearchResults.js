@@ -2,7 +2,6 @@ import PaginationButtons from "./PaginationButtons";
 import { MoonIcon } from "@heroicons/react/solid";
 
 function SearchResults({ results, newsResults, setDarkMode, darkMode }) {
-  console.log(newsResults);
   return (
     <div className="flex">
       <div className="mx-auto w-full px-3 sm:pl-[5%] md:pl-[14%] lg:pl-52">
@@ -48,7 +47,8 @@ function SearchResults({ results, newsResults, setDarkMode, darkMode }) {
         </div>
 
         {newsResults?.articles?.map((article) => (
-          <div
+          <a
+            href={article.url}
             key={article?.url}
             className="pb-2 mb-10 w-full max-w-sm bg-gray-100 group rounded-lg dark:bg-gray-700"
           >
@@ -83,7 +83,7 @@ function SearchResults({ results, newsResults, setDarkMode, darkMode }) {
                 {article?.description}
               </p>
             </div>
-          </div>
+          </a>
         ))}
       </div>
     </div>

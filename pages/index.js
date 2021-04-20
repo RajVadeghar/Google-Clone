@@ -33,12 +33,12 @@ export default function Home() {
       </Head>
 
       <header className="flex w-full p-5 justify-between text-sm text-gray-700 dark:bg-gray-700 dark:text-white">
-        <div className="flex space-x-4 items-center">
+        <div className="flex space-x-2 sm:space-x-4 items-center">
           <p className="link">About</p>
           <p className="link">Store</p>
         </div>
 
-        <div className="flex space-x-4 items-center">
+        <div className="flex space-x-2 sm:space-x-4 items-center">
           <p className="link">Gmail</p>
           <p className="link">Images</p>
 
